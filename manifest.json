@@ -1,0 +1,43 @@
+{
+  "manifest_version": 3,
+  "name": "公众号 HTML 导入",
+  "version": "1.0.7",
+  "description": "在微信公众号图文编辑页中导入 HTML，并上传图片到微信素材库",
+  "host_permissions": [
+    "https://mp.weixin.qq.com/*",
+    "<all_urls>"
+  ],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "action": {
+    "default_title": "导入 HTML 到正文",
+    "default_icon": {
+      "16": "icons/icon-16.png",
+      "32": "icons/icon-32.png",
+      "48": "icons/icon-48.png",
+      "128": "icons/icon-128.png"
+    }
+  },
+  "icons": {
+    "16": "icons/icon-16.png",
+    "32": "icons/icon-32.png",
+    "48": "icons/icon-48.png",
+    "128": "icons/icon-128.png"
+  },
+  "content_scripts": [
+    {
+      "matches": ["https://mp.weixin.qq.com/*"],
+      "js": ["page/bridge.js"],
+      "world": "MAIN",
+      "run_at": "document_start",
+      "all_frames": true
+    },
+    {
+      "matches": ["https://mp.weixin.qq.com/*"],
+      "js": ["content/html.js", "content/panel.js", "content/main.js"],
+      "run_at": "document_idle",
+      "all_frames": true
+    }
+  ]
+}
