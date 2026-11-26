@@ -2,6 +2,8 @@
 
 <img src="icons/icon-128.png" width="96" alt="公众号 HTML 导入">
 
+[在 Edge 中安装](https://microsoftedge.microsoft.com/addons/detail/%E5%85%AC%E4%BC%97%E5%8F%B7-html-%E5%AF%BC%E5%85%A5/flokpehdmokjkmiphmciekbejalcllkc)
+
 在微信公众号图文编辑页里导入 HTML。扩展会在右上角「文档导入」左侧放一个「导入」按钮，带图标和与该按钮相同的浅灰背景。点击扩展图标也会打开同一个弹窗。
 
 弹窗里可以粘贴 HTML，或上传 `.html` 文件。确认后：
